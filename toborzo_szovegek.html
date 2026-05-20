@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <title>Toborzó Szövegek</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #1e1e1e; color: #f0f0f0; margin: 20px; max-width: 800px; margin-left: auto; margin-right: auto;}
+        h1 { color: #f39c12; text-align: center; }
+        h2 { color: #e67e22; margin-top: 30px; border-bottom: 1px solid #555; padding-bottom: 5px; }
+        .message-container { 
+            background-color: #2c3e50; 
+            margin: 15px 0; 
+            padding: 15px; 
+            border-radius: 8px; 
+            display: flex; 
+            flex-direction: column;
+            gap: 10px;
+        }
+        .text-content {
+            font-size: 1.1em;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        .copy-btn {
+            align-self: flex-start;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: #2980b9;
+        }
+        .copy-btn.copied {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <h1>Toborzó Szövegek Másolása</h1>
+    <h2>🎯 3000–5000 pont közötti játékosoknak (Aktív bázis építése)</h2>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Unod, hogy a jelenlegi klánod inaktív és egyetlen SH csatát sem játszotok? Az UHH klánban csupa hozzád hasonló, átlagos játékos vár, akik szeretnének fejlődni! Nálunk esténként mindig van SH csata (900–1000 közötti Élő-pont), naponta mennek a boosterek, szombatonként pedig goldot is szerezhetsz. Segíts nekünk szintet lépni, lépjünk előre együtt!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Ha a mostani klánod teljesen ellustult és hanyagolja az SH-t, váltás az UHH-ra! Átlagos játékosokból álló keretünkbe olyan aktív tagokat keresünk, akikkel közösen léphetünk a következő szintre. Nálunk minden este garantált az SH csata, naponta pörögnek a klán boosterek, szombatonként pedig gold-szerzés vár!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Ne pazarold az idődet egy inaktív klánban, ahol már megmozdulni sem akarnak az SH-ra! Az UHH-ban megkapod a szükséges pörgést: nálunk átlagos játékosok alkotják a magot, de a célunk a fejlődés. Esti csaták 900–1000 közötti Élő-ponton, napi boosterek és szombati goldos események várnak. Segíts a klánt a megfelelő szintre juttatni!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Ráuntál, hogy a jelenlegi klánodban csak gyűlik a por, és az SH csaták teljesen leálltak? Gyere az UHH-ba! Nálunk átlagos, de hozzád hasonlóan fejlődni akaró játékosok találnak otthonra. Esténként mindig van SH (900–1000 közötti Élő-pont), naponta pörgetjük a boostereket, szombaton pedig goldot osztunk. Segíts nekünk a megfelelő szintre jutni!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Miért vagy tagja egy olyan klánnak, ami papíron létezik, de valójában inaktív és nem indít SH-t? Az UHH-ban minden este akció vár! Átlagos játékosainkkal azon dolgozunk, hogy szintet lépjünk, és ehhez pont a te aktivitásod kell. Napi boosterek és szombati goldos események garantálják a gyors haladásodat!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Keresel egy aktív csapatot a 3k-5k közötti pontod mellé, mert a mostani klánod teljesen beszürkült és hanyagolja az SH-t? Az UHH megadja a pörgést: nálunk átlagos szintű, de elkötelezett tagok játszanak minden este. Gyere, segíts a klánt felhozni a megfelelő szintre, használd ki a napi boostereket és zsebeld be a szombati goldot!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Ha eleged van abból, hogy egy inaktív társaságban egymagad próbálsz fejlődni, az UHH-t neked találták ki. Keretünk átlagos játékosokból áll, de a célunk egy komolyabb szint elérése. Nálunk az esti SH fix program (900–1000 Élő), a boosterek naponta mennek, szombatonként pedig gold-szerzés vár. Tegyük oda magunkat közösen!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Ne hagyd, hogy egy inaktív, SH-mentes klán elvegye a kedved a játéktól! Az UHH klán tárt karokkal vár. Nálunk átlagos játékosok fognak össze minden este, hogy a 900–1000 közötti SH pontszámunkat feltornázzuk. Segíts nekünk elérni a célt! Amit kapsz: napi klán boosterek, folyamatos esti csaták és szombatonként gold.</div>
+    </div>
+    <h2>🔥 5000–7000 pont közötti játékosoknak (A klán motorjai / Erősítés)</h2>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Elérted az 5k+ szintet, de a klánod teljesen inaktív és nem játszik SH csatákat? Ne hagyd elveszni a tudásod! Az UHH átlagos játékosokból álló keretéhez keresünk olyan húzóembereket, akik segítenek a 900–1000 közötti SH Élő-pontunkat magasabb szintre emelni. Kell a segítséged a szintlépéshez! Amit kínálunk: fix esti SH, napi boosterek és szombati gold-szerzés.</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Eleged van abból, hogy a klánodban senki nem ér rá esténként, és az SH-ról már csak álmodtok? Az UHH klánnak pont a te aktivitásodra van szüksége, hogy az átlagos játékosokból álló csapatunkat a megfelelő szintre juttassuk! Nálunk minden este fixen megy a harc, naponta dübörögnek a boosterek, szombatonként pedig goldot osztunk. Fejlődjünk együtt!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Stabil 5000-7000 közötti játékos vagy, de egy inaktív, SH-mentes klánban ragadtál? Legyél inkább az UHH következő pillére! Szükségünk van a segítségedre, hogy az átlagos szintű csapatunkat feljebb emeljük. Nálunk a klán boosterek alapfelszereltségnek számítanak, az esti SH fix program (900–1000 Élő), szombatonként pedig zsebre vághatod a goldot. Válts egy pörgős csapatra!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Miért ülsz egy döglött klánban, ahol teljesen leálltak az SH csaták? Az UHH-ban tárt karokkal várunk! Bár a keretünk jelenleg átlagos játékosokból áll, a célunk a folyamatos szintlépés, amihez kell a segítséged. Emeljük meg együtt a 900–1000 közötti SH szintünket! Nálunk naponta mennek a boosterek, esténként az SH, szombatonként pedig a gold-események!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Stabil 5k-7k közötti pontod van, de a klánod inaktívvá vált és teljesen elengedte az SH csatákat? Ne ülj a kispadon! Az UHH átlagos szintű keretének pont egy olyan húzóemberre van szüksége, mint te, hogy szintet lépjünk. Nálunk minden este garantált az SH (900–1000 Élő), naponta dübörögnek a boosterek, szombatonként pedig gold-szerzés vár rád!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Miért pazarolod az idődet egy döglött klánban, ahol már azt sem tudják, mi az az SH? Az UHH klánban megkapod a megérdemelt pörgést. Segíts az átlagos játékosokból álló csapatunknak magasabb szintre lépni! Cserébe nálunk fix esti csaták, folyamatos napi boosterek és szombati goldos események várnak egy aktív közösségben.</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Ha a mostani klánod inaktivitása miatt már elfelejtetted, milyen jó egy jó SH csata, itt az idő váltani! Az UHH-ban a 900–1000 közötti Élő-pontos szintünket szeretnénk feljebb tornázni, amihez kell a te játéktudásod is. Emeljük ki a csapatot az átlagos szintből! A napi boosterek és a szombati gold alap nálunk.</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Te már komolyabb játékerőt képviselsz – ne hagyd, hogy egy inaktív, SH-t nem játszó klán visszahúzzon! Az UHH-ban te lehetsz a fejlődés kulcsa. Segíts az átlagos játékosainknak beérni a megfelelő szintre. Esténként mindig pörög a Stronghold, naponta aktívak a boosterek, szombatonként pedig jön a gold!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Unod a magányos random csatákat, ballaszt vagy egy inaktív klánban, ahol leállt az SH? Válts az UHH-ra, ahol te lehetsz a csapat motorja! Szükségünk van rád, hogy az átlagos játékosállományunkat és a 900–1000 közötti SH pontunkat magasabb szintre emeljük. Napi boosterek, fix esti meccsek és szombati gold-lehetőség vár!</div>
+    </div>
+    <h2>🏆 7000 pont feletti játékosoknak (Vezéregyéniségek / Taktikai segítség)</h2>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Igazi heavy-hitter vagy 7k+ értékeléssel, de a jelenlegi klánod inaktív és az SH-t hírből sem ismeri? Ne hagyd magad visszahúzni! Az UHH klánnak pont egy olyan tapasztalt játékos kellene, aki segít az átlagos játékosokból álló keretünket a megfelelő szintre juttatni. Emeld fel a 900–1000 közötti SH Élő-pontunkat! Cserébe garantált esti SH-k, folyamatos napi boosterek és szombati gold-lehetőség vár rád.</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Unod a görcsölést, ráadásul a mostani klánod teljesen leállt az SH csatákkal? Legyél egy fejlődő projekt kulcsembere! Az UHH-ban te lehetsz a húzóerő, akinek a segítségével magasabb szintre emeljük az átlagos szintű csapatunkat és a 900–1000 közötti SH-nkat. Mutass utat nekünk esténként! Napi boosterek és szombati gold-szerzés vár egy tisztelettudó, de aktív közösségben.</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Megvan a tudásod és a 7k+ pontod, de egy inaktív klánban unatkozol, ahol nincs SH? Segíts az UHH klánnak szintet lépni! Keretünket jelenleg nagyrészt átlagos játékosok alkotják, SH-ban 900–1000 között mozgunk – a te tapasztalatoddal viszont elérhetjük a megfelelő szintet. Nálunk esténként mindig van SH csata, naponta mennek a boosterek, szombatonként pedig gold vár rád. Legyél te a motorunk!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">7k+ értékeléssel rendelkezel, de egy inaktív klánban ragadtál, ahol az SH csata már csak emlék? Vállalj szerepet egy izgalmas projektben! Az UHH klánnak (900–1000 SH Élő) pont a te tapasztalatodra lenne szüksége, hogy az átlagos szintű keretünket a megfelelő magasságokba emeljük. Mutass utat az esti csatákon! Napi boosterek és szombati gold-szerzés garantált.</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Egy unalmas, inaktív klán helyett legyél az UHH húzóembere! Tudjuk, hogy a mi csapatunk még nagyrészt átlagos játékosokból áll, de a te segítségeddel és 7000 feletti pontoddal végre szintet léphetünk. Nálunk minden este pörög az SH, naponta mennek a boosterek, szombatonként pedig jönnek a goldos események. Legyél te a klánunk mentora!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">If a jelenlegi klánod teljesen passzív és egyáltalán nem játszik SH-t, ne hagyd elértéktelenedni a tudásod. Az UHH-ban kulcsszerep vár rád: segíts az átlagos szintű csapatunknak gatyába rázni a 900–1000 Élő-pontos SH-t és elérni a vágyott szintet. Nálunk naponta mennek a klán boosterek, esténként az SH, szombatonként pedig fixen gold vár!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Top játékos vagy, de a klánod inaktivitása miatt nem tudsz kibontakozni? Az UHH-ban te lehetsz a legnagyobb érték! Segíts felemelni az átlagos játékosainkat, és vezesd a csapatot sikerre az esti SH csatákon. Mi biztosítjuk a napi boostereket, a stabil esti aktivitást és a szombati gold-szerzést, te pedig hozhatod a szaktudásod a szintlépéshez!</div>
+    </div>
+    <div class="message-container">
+        <button class="copy-btn" onclick="copyText(this)">📋 Másolás vágólapra</button>
+        <div class="text-content">Miért ülsz egy olyan klánban, ami teljesen leállt az SH-val? Az UHH-ban komoly céljaink vannak, de a jelenlegi átlagos keretünkhöz szükségünk van a te 7k+ szintű segítségedre. Juttassuk el a klánt a megfelelő szintre együtt! Esténként mindig van SH harc, naponta pörögnek a boosterek, szombatonként pedig zsebre vághatod a goldot!</div>
+    </div>
+
+    <script>
+        function copyText(button) {
+            const container = button.parentElement;
+            const textElement = container.querySelector('.text-content');
+            const textToCopy = textElement.textContent || textElement.innerText;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = "✅ Sikeresen másolva!";
+                button.classList.add("copied");
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove("copied");
+                }, 2000);
+            }).catch(err => {
+                console.error('Hiba a másolás során: ', err);
+                alert("Nem sikerült a másolás. Kérlek másold ki kézzel!");
+            });
+        }
+    </script>
+</body>
+</html>
