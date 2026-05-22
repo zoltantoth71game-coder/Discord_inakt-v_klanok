@@ -55927,42 +55927,38 @@
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
 
-        const validUsers = {
-            "Colomann": "c08",
-            "N_Erik": "n06",
-            "Sstephen2018": "s12",
-            "Egnep": "e05",
-            "kazan121": "k08",
-            "whyskys": "w07",
-            "cseles73": "c08",
-            "Beszmen": "b07",
-            "Lilamajom": "l09",
-            "wich01": "w06",
-            "Mtomi9352": "m09",
-            "aresz73": "a07"
-        };
-        
         let currentUser = localStorage.getItem("uhh_logged_in_user");
 
         function login() {
             const u = document.getElementById("username").value.trim();
             const p = document.getElementById("password").value.trim();
-            if (validUsers[u] && validUsers[u] === p) {
-                currentUser = u;
-                localStorage.setItem("uhh_logged_in_user", u);
-                document.getElementById("login-overlay").style.display = "none";
-                document.getElementById("login-error").style.display = "none";
-            } else {
-                document.getElementById("login-error").style.display = "block";
-            }
+            
+            db.ref('users/' + u).once('value').then((snapshot) => {
+                const correctPassword = snapshot.val();
+                if (correctPassword && correctPassword === p) {
+                    currentUser = u;
+                    localStorage.setItem("uhh_logged_in_user", u);
+                    document.getElementById("login-overlay").style.display = "none";
+                    document.getElementById("login-error").style.display = "none";
+                } else {
+                    document.getElementById("login-error").style.display = "block";
+                }
+            }).catch((err) => {
+                console.error("Firebase hiba: ", err);
+                alert("Hiba történt a bejelentkezéskor! Ellenőrizd a netet.");
+            });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            if (currentUser && validUsers[currentUser]) {
-                document.getElementById("login-overlay").style.display = "none";
-            } else {
-                currentUser = null;
-                localStorage.removeItem("uhh_logged_in_user");
+            if (currentUser) {
+                db.ref('users/' + currentUser).once('value').then((snapshot) => {
+                    if (snapshot.exists()) {
+                        document.getElementById("login-overlay").style.display = "none";
+                    } else {
+                        currentUser = null;
+                        localStorage.removeItem("uhh_logged_in_user");
+                    }
+                });
             }
 
             const checkboxes = document.querySelectorAll('.recruit-checkbox');
